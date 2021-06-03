@@ -5,5 +5,5 @@ Miamizer retrieves AWS IAM resources from AWS CloudFormation Stack and outputs a
 ## Usage
 
 ```sh
-$ bundle exec ruby ./miamizer.rb your-stack-name
+$ bundle exec ruby ./miamizer.rb your-aws-stack-name
 ```
