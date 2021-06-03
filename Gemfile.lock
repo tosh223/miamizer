@@ -1,0 +1,45 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-eventstream (1.1.1)
+    aws-partitions (1.465.0)
+    aws-sdk-cloudformation (1.52.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-core (3.114.1)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-iam (1.55.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.2.3)
+      aws-eventstream (~> 1, >= 1.0.2)
+    diffy (3.4.0)
+    hashie (4.1.0)
+    jmespath (1.4.0)
+    miam (0.2.4)
+      aws-sdk-iam (~> 1)
+      diffy
+      hashie
+      parallel
+      ruby-progressbar
+      term-ansicolor
+    parallel (1.20.1)
+    ruby-progressbar (1.11.0)
+    sync (0.5.0)
+    term-ansicolor (1.7.1)
+      tins (~> 1.0)
+    tins (1.29.1)
+      sync
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  aws-sdk-cloudformation
+  miam
+
+BUNDLED WITH
+   2.2.4
