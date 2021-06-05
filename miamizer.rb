@@ -3,6 +3,7 @@ require 'open3'
 
 module Miamizer
   module_function
+
   def run_cmd!(cmd)
     _, err, status = Open3.capture3(cmd)
     unless err.empty?
