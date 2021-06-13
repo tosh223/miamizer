@@ -35,17 +35,23 @@ module Miamizer
 end
 
 if __FILE__ == $PROGRAM_NAME
+  stack_name = nil
   profile = nil
+
   opt = OptionParser.new
-  opt.on('-p VAL') { |val| profile = val }
+  opt.on('-s', '--stack_name=[stack_name]') { |val| stack_name = val }
+  opt.on('-p', '--profile=[profile]') { |val| profile = val }
   opt.parse!(ARGV)
 
-  if ARGV[0].nil?
-    puts 'Please set a stack-name.'
-    exit(1)
-  else
-    stack_name = ARGV[0]
-    status = Miamizer.export(stack_name, profile)
-    exit(status)
+  if stack_name.nil?
+    if ARGV[0].nil?
+      puts 'Please set a AWS stack name.'
+      exit(1)
+    else
+      stack_name = ARGV[0]
+    end
   end
+
+  status = Miamizer.export(stack_name, profile)
+  exit(status)
 end
