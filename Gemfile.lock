@@ -18,7 +18,7 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     diffy (3.4.0)
     hashie (4.1.0)
-    jmespath (1.4.0)
+    jmespath (1.6.1)
     miam (0.2.4)
       aws-sdk-iam (~> 1)
       diffy
